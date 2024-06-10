@@ -26,6 +26,17 @@
                         </a>
 
                     </li>
+            
+                    <li class="nav-item has-treeview">
+
+                        <a href="{{route('admin.reservation.index')}}" class="nav-link">
+                            <i class="fa fa-circle-o nav-icon"></i>
+                            <p>
+                                رزرزو شده ها
+                            </p>
+                        </a>
+
+                    </li>
 
                 </ul>
 

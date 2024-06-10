@@ -18,6 +18,7 @@ return new class extends Migration
             $table->text('image');
             $table->decimal('price', 20, 3);
             $table->tinyInteger('status')->default(0);
+            $table->tinyInteger('is_special')->default(0);
             $table->foreignId('category_id')->constrained('categories')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });

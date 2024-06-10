@@ -66,7 +66,7 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Category $category)
+    public function destroy(Category $category) 
     {
         $category->delete();
         return to_route('admin.category.index')->with('swal-success', 'ایتم با موفقیت ویرایش شد');   

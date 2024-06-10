@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReservationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\AdminDashboardController;
@@ -23,7 +24,11 @@ Route::prefix('admin')->group(function () {
             Route::get('/status/{category}', 'status')->name('admin.category.status');
             Route::delete('/destroy/{category}', 'destroy')->name('admin.category.destroy');
         });
-
+        
+        Route::controller(ReservationController::class)->prefix('reservation')->group(function(){
+            Route::get('/', 'index')->name('admin.reservation.index');
+            Route::get('/show/{reservation}','show')->name('admin.reservation.show');
+        });
 
 
 });
